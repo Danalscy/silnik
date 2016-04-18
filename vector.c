@@ -25,13 +25,22 @@ int szukaj(char *key, vector_t *tab){
 			return tab->para[i].status;
         wyraz = tab->para[++i].word;
 	}
- printf("Nie znaleziono %s\n",key);
  return -1;
 }
 
+void zwalnianie(vector_t *tab){
+ int i;
+ for(i=0;i<tab->capacity;i++){
+	free(tab->para[i].word);
+ }
+ free(tab->para);
+ //tab->para=NULL;
+}
 void print(vector_t a){
+ printf("\nTabela:\n");
  int i;
  for(i=0;i<a.size;i++){
-	printf("%s %d\n",a.para[i].word,a.para[i].status);
+	printf(" %s %d\n",a.para[i].word,a.para[i].status);
  }
+ printf("\n");
 }

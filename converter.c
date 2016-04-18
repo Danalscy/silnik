@@ -64,7 +64,7 @@ bool convert(char *input, char *output){
                 pop(&stos);
             }
             else  {
-                printf("Error: DUPA %c\n", current);
+                printf("Error: ZLE ZNAKI %c\n", current);
                 return false; 
             }
         }
@@ -120,21 +120,18 @@ bool wnioskuj(char * expr)  {
 }
 
 char *replace_str(char *s, char *old, char *new) {
-	char *tmp;
-	int i,count=0;
-    int newlen = strlen(new);
-    int oldlen = strlen(old);
-
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        if (strstr(&s[i], old) == &s[i])
-        {
+ char *tmp;
+ int i,count=0;
+ int newlen = strlen(new);
+ int oldlen = strlen(old);
+ for (i = 0; s[i] != '\0'; i++){
+        if (strstr(&s[i], old) == &s[i]){
             count++;
             i += oldlen - 1;
         }
-    }
-    tmp = (char *)malloc(i + count * (newlen - oldlen));
-    i = 0;
+ }
+ tmp = (char *)malloc(i + count * (newlen - oldlen));
+ i = 0;
     while (*s)
     {
         if (strstr(s, old) == s) 
@@ -146,8 +143,8 @@ char *replace_str(char *s, char *old, char *new) {
         else
         tmp[i++] = *s++;
     }
-    tmp[i] = '\0';
-    return tmp;
+ tmp[i] = '\0';
+ return tmp;
 
 }
 

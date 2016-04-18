@@ -1,3 +1,4 @@
+18
 !BolSam && BolPalp && !Krwiak && !Obrzek && !ObjSzczt && !OgrROM && !ObjKorz && UszkApWz =>podZwLZlOdSz
 (BolSam || BolPalp) && Krwiak && Obrzek && ObjSzczt && OgrROM && !ObjKorz && !UszkApWz => podStlOdSz
 (BolSam || BolPalp) && Krwiak && Obrzek && ObjSzczt && OgrROM && ObjKorz && !UszkApWz => podSkrOdSz
@@ -13,5 +14,9 @@
 podZwLZlOdSz || podStlOdSz || podSkrOdSz => mozKoln
 podZwLZlOdSz || podStlOdSz || podSkrOdSz => mozFarm
 podZwLZlOdSz => mozKlmr
+asd => damn
 podStlLSkrOdPrLd || podZlOdPrLd || podZlOdLd => mosUnrch
 podZlOdPrLd => mozGrst
+BolSam || BolPalp => !A
+Krwiak || Obrzek => B
+A || B => !C

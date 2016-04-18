@@ -21,6 +21,8 @@ void init(vector_t *a, int n);
 
 void print(vector_t a);
 
+void zwalnianie(vector_t *tab);
+
 int szukaj(char *key, vector_t *tab);
 
 #endif

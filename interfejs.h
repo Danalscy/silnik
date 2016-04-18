@@ -5,6 +5,8 @@
 #include <string.h>
 #include "vector.h"
 #include "converter.h"
-void read_table(FILE *dane,vector_t *tabela);
-void wnioskowanie_przod(FILE *dane,vector_t *tabela);
+#include "stack.h"
+void read_table(FILE *dane,FILE *wzory,vector_t *tab,vector_t *reguly);
+int wnioskowanie_przod(vector_t *tabela, char *szukane,vector_t *reguly);
+int wnioskowanie_tyl(vector_t *tabela, char *szukane, vector_t *reguly,stack_st *queue);
 #endif
